@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { createContext, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Signup from './Component/Signup';
+import Profile from './Component/Profile';
+import Nav from './Component/Nav';
+
+
+
+export const AuthContext = createContext()
 
 function App() {
+
+  const [signup, setsignup] = useState(() => Boolean(localStorage.getItem('token')));
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ width : "100vw", height: "100vh", backgroundColor: "#000"}}>
+      <Nav  />
+      <AuthContext.Provider value={{ signup, setsignup }}>
+        <Signup>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/Profile' Component={Profile} />
+              {/* <Route path='*' element={<NotFound />} /> */}
+            </Routes>
+          </BrowserRouter>
+        </Signup>
+      </AuthContext.Provider>
     </div>
   );
 }

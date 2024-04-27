@@ -1,0 +1,31 @@
+.topnav {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e7e7e7;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 90%;
+    /* border: 1px solid red; */
+
+    .button {
+      background-color: transparent;
+      /* border: 1px solid red; */
+      width: 150px;
+      button {
+        background-color: transparent;
+        color: #e7e7e7;
+        gap: 10px;
+        margin-left: 10px;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}

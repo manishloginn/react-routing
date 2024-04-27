@@ -1,0 +1,33 @@
+.formdata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    color: white;
+    flex-direction: column;
+    /* border: 1px solid white; */
+
+    .formda {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        gap: 20px;
+        input {
+            height: 30px;
+            padding: 3px 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 17px;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            outline: none;
+        }
+    }   
+}
