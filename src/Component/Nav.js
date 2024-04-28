@@ -1,4 +1,18 @@
+import { Link } from "react-router-dom"
 import "./navstyle.css"
+
+
+const link = [
+    {
+        title:"Signup",
+        link: "/"
+    },
+    {
+        title:"Profile",
+        link: "/Profile"
+    }
+]
+
 
 const Nav = () => {
     return (
@@ -8,8 +22,11 @@ const Nav = () => {
                     <p>Header</p>
                 </div>
                 <div className="button">
-                    <button>Signup</button>
-                    <button>Profile</button>
+                    {
+                        link.map((item) => {
+                            return <Link  className="buttonn" to={item.link} key={item.title}>{item.title}</Link>
+                        })
+                    }
                 </div>
             </nav>
         </div>

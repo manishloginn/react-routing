@@ -18,13 +18,14 @@
       background-color: transparent;
       /* border: 1px solid red; */
       width: 150px;
-      button {
+      .buttonn {
         background-color: transparent;
         color: #e7e7e7;
         gap: 10px;
         margin-left: 10px;
         outline: none;
         border: none;
+        text-decoration: none;
       }
     }
   }
